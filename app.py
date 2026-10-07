@@ -184,3 +184,47 @@ div[data-testid="stAlert"] {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+/* بطاقات الأقسام */
+div[data-testid="stVerticalBlock"] {
+    gap: 0.8rem;
+}
+
+/* العناوين */
+h2, h3 {
+    color: #38BDF8 !important;
+    font-weight: 800 !important;
+}
+
+/* تحسين مربعات الإدخال */
+.stTextInput input, .stTextArea textarea {
+    border: 1px solid #2563EB !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+}
+
+/* الأزرار */
+.stButton > button {
+    background: linear-gradient(90deg, #0284C7, #2563EB) !important;
+    border: 1px solid #38BDF8 !important;
+    border-radius: 12px !important;
+    color: white !important;
+    font-weight: bold !important;
+    transition: 0.3s !important;
+}
+
+/* تأثير عند المرور */
+.stButton > button:hover {
+    box-shadow: 0 0 20px #38BDF8 !important;
+    transform: translateY(-2px);
+}
+
+/* التنبيهات والنتائج */
+div[data-testid="stAlert"] {
+    border-radius: 14px !important;
+    border: 1px solid #38BDF8 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
