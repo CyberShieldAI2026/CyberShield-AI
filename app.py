@@ -277,3 +277,31 @@ div[data-testid="stAlert"] {
 
 </style>
 """, unsafe_allow_html=True)
+st.divider()
+st.subheader("🔎 الفحص الذكي")
+
+smart_input = st.text_input("أدخل رابطًا أو نصًا للفحص الذكي")
+
+if st.button("تحليل ذكي"):
+    if smart_input:
+        suspicious_words = [
+            "password",
+            "verify",
+            "login",
+            "free",
+            "winner",
+            "urgent"
+        ]
+
+        found = [word for word in suspicious_words if word.lower() in smart_input.lower()]
+
+        if found:
+            st.error("🔴 مستوى الخطورة: مرتفع")
+            st.warning("تم العثور على مؤشرات قد تكون مشبوهة.")
+            st.write("المؤشرات:", ", ".join(found))
+        else:
+            st.success("🟢 مستوى الخطورة: منخفض")
+            st.info("لم يتم العثور على مؤشرات مشبوهة واضحة.")
+
+    else:
+        st.warning("يرجى إدخال نص أو رابط أولًا.")
