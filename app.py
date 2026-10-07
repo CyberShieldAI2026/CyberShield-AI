@@ -29,6 +29,12 @@ h1, h2, h3 {
 """, unsafe_allow_html=True)
 st.title("CyberShield AI  | الأمن السيبراني")
 st.write("نظام ذكي للكشف عن التهديدات السيبرانية وتحليلها ")
+st.markdown("""
+<div style="text-align:center; padding:20px; border-radius:18px; border:1px solid #38BDF8; margin-bottom:25px;">
+<h3 style="color:#38BDF8;">🛡️ حماية رقمية أذكى</h3>
+<p>CyberShield AI — نظام ذكي لدعم الأمن السيبراني</p>
+</div>
+""", unsafe_allow_html=True)
 st.header("تحليل التهديدات ")
 user_input = st.text_input("ادخل البيانات المراد تحليلها:")
 if st.button("بدء تحليل التهديد"):
@@ -144,6 +150,36 @@ st.markdown("""
    
    .stButton > button:hover {
        transform: scale(1.02)
+}
+
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
+div[data-testid="stAlert"] {
+    background: linear-gradient(135deg, #0B1F36, #102E4A);
+    border: 1px solid #38BDF8;
+    box-shadow: 0 0 15px rgba(56,189,248,0.15);
+}
+
+.stTextInput, .stTextArea {
+    background-color: #0B1728;
+    border-radius: 15px;
+}
+
+.stButton > button {
+    background: linear-gradient(90deg, #0284C7, #2563EB);
+    border-radius: 12px;
+    border: 1px solid #38BDF8;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px;
+    box-shadow: 0 0 12px rgba(14,165,233,0.25);
+}
+
+.stButton > button:hover {
+    box-shadow: 0 0 22px rgba(56,189,248,0.55);
+    transform: translateY(-2px);
 }
 
 </style>
