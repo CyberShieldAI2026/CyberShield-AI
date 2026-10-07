@@ -1,4 +1,32 @@
 import streamlit as st
+st.set_page_config(
+    page_title="CyberShield AI",
+         page_icon="🛡️",
+         layout="wide"
+     )
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #07111F;
+    color: white;
+}
+h1, h2, h3 {
+    color: #38BDF8 !important;
+}
+.stButton > button {
+    background-color: #0EA5E9;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+.stTextInput input, .stTextArea textarea {
+    background-color: #111D2E;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("CyberShield AI  | الأمن السيبراني")
 st.write("نظام ذكي للكشف عن التهديدات السيبرانية وتحليلها ")
 st.header("تحليل التهديدات ")
