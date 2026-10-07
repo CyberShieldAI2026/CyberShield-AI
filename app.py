@@ -112,3 +112,39 @@ div[data-testid="stAlert"] {
 }
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1100px;
+ }
+ 
+ h1 {
+     text-align: center;
+     font-size: 45px !important;
+     font-weight: 800 !important;
+     letter-spacing: 1px;
+}
+  
+  h2, h3 {
+      border-bottom: 1px solid #1E90FF;
+      padding-bottom: 8px;
+}
+  div[data-testid="stTextInput"],
+  div[data-testid="stTextArea"] {
+      border-radius: 12px;
+}
+  
+  .stButton > button {
+      width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
+ }
+   
+   .stButton > button:hover {
+       transform: scale(1.02)
+}
+
+</style>
+""", unsafe_allow_html=True)
