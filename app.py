@@ -36,6 +36,16 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 st.header("تحليل التهديدات ")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("🛡️ حالة النظام", "آمن")
+
+with col2:
+    st.metric("🔍 الفحوصات", "جاهز")
+
+with col3:
+    st.metric("⚠️ مستوى الخطورة", "متوسط")
 user_input = st.text_input("ادخل البيانات المراد تحليلها:")
 if st.button("بدء تحليل التهديد"):
      if user_input:
