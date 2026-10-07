@@ -39,13 +39,52 @@ st.header("تحليل التهديدات ")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.metric("🛡️ حالة النظام", "آمن")
+    st.markdown("""
+    <div style="padding:20px; border-radius:16px; border:1px solid #38BDF8; background:#0B1F36; text-align:center;">
+    <h3>🛡️ حالة النظام</h3>
+    <h2 style="color:#22C55E;">آمن</h2>
+    <p>النظام يعمل بشكل طبيعي</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.metric("🔍 الفحوصات", "جاهز")
+    st.markdown("""
+    <div style="padding:20px; border-radius:16px; border:1px solid #38BDF8; background:#0B1F36; text-align:center;">
+    <h3>🔍 الفحوصات</h3>
+    <h2 style="color:#38BDF8;">جاهز</h2>
+    <p>بانتظار البيانات</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col3:
-    st.metric("⚠️ مستوى الخطورة", "متوسط")
+    st.markdown("""
+    <div style="padding:20px; border-radius:16px; border:1px solid #F59E0B; background:#0B1F36; text-align:center;">
+    <h3>⚠️ مستوى الخطورة</h3>
+    <h2 style="color:#F59E0B;">متوسط</h2>
+    <p>يحتاج إلى تحليل</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.subheader("مستويات الخطورة")
+
+risk1, risk2, risk3 = st.columns(3)
+
+with risk1:
+    st.markdown("🟢 **منخفض**  \nلا توجد مؤشرات خطيرة واضحة.")
+
+with risk2:
+    st.markdown("🟠 **متوسط**  \nيحتاج إلى التحقق والتحليل.")
+
+with risk3:
+    st.markdown("🔴 **مرتفع**  \nيحتاج إلى اتخاذ إجراء سريع.")
+st.subheader("نتيجة التحليل")
+
+st.markdown("""
+<div style="padding:25px; border-radius:18px; background:#0B1F36; border:1px solid #38BDF8; text-align:center;">
+<h2 style="color:#38BDF8;">🛡️ حالة التهديد</h2>
+<h1 style="color:#F59E0B;">متوسط</h1>
+<p>التوصية: تأكد من مصدر البيانات وتجنب الروابط والملفات المشبوهة.</p>
+</div>
+""", unsafe_allow_html=True)
 user_input = st.text_input("ادخل البيانات المراد تحليلها:")
 if st.button("بدء تحليل التهديد"):
      if user_input:
