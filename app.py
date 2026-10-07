@@ -100,3 +100,15 @@ st.divider()
 
 st.subheader("عن CyberShield AI")
 st.write("نظام ذكي يهدف إلى دعم الوعي بالأمن السيبراني والمساعدة في التعرف على التهديدات الرقمية.")
+st.markdown("""
+<style>
+div[data-testid="stAlert"] {
+    border-radius: 15px;
+    border: 1px solid #38BDF8;
+}
+.stButton > button:hover {
+    border: 2px solid #38BDF8;
+    color: #38BDF8;
+}
+</style>
+""", unsafe_allow_html=True)
